@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Javascript</title>
+</head>
+<body>
+    
+    
+    
+    
+    
+    
+    <script>
+
+        //Javascript P4 - Condicionais 
+
+        function retornaSexo(sexo){
+
+            if (sexo === "M") {
+
+                return "Masculino";
+                
+            } else if (sexo === "F") {
+                
+                return "Feminino";
+            } else {
+                return "Indefinido";
+            }            
+        }
+
+        var rSexo1 = retornaSexo("M");
+        var rSexo2 = retornaSexo("F");
+        var rSexo3 = retornaSexo("k");
+
+        function retornaSexo(sexo){
+
+        if (sexo === "M") {
+
+            return "Masculino";
+    
+        } else if (sexo === "F") {
+    
+            return "Feminino";
+        } else {
+            return "Indefinido";
+        }
+    }
+
+
+
+        var fResultado = soma(1920,1080);
+
+
+
+        //Javascript P3 - Funções 
+
+        function soma(numero1, numero2){
+            var fResultado = numero1 + numero2
+            return fResultado;
+        }
+
+        var fResultado = soma(1920,1080);
+
+
+        //Javascript P2 - Operações matemáticas
+
+        var x = 10;
+        var y = 25.6;
+        var m = 31, a = 32;
+        var resultado0 = m + a;
+        var resultado1 = x - a;
+        var resultado2 = m * y;
+        var resultado3 = a / x;
+        var resultado4 = 5 % 3;
+        var resultado5 = m + 3;
+        m +=10;
+
+        
+
+        //Javascript P1 - Variaveis e dados
+        var nome = 'Madson';
+        var idade = 31;
+        var peso = 98.4;
+        var humano = true;
+
+        var alunos = ['Madson','Robson','Puc']
+        
+        var aluno = {
+            nome:'Carlos',
+            idade: 35,
+            peso: 80.5,
+            humano: true
+        };
+
+        console.log(rSexo1); // Exibindo - P4
+        console.log(rSexo2); // Exibindo - P4
+        console.log(rSexo3); // Exibindo - P4
+        console.log(fResultado); // Exibindo - P3
+        console.log(resultado1); // Exibindo - P2
+        console.log(resultado2); // Exibindo - P2
+        console.log(resultado3); // Exibindo - P2
+        console.log(resultado4); // Exibindo - P2
+        console.log(resultado5); // Exibindo - P2
+        console.log(m);          // Exibindo - P2
+        console.log(alunos[0]);  // Exibindo - P1
+        console.log(aluno);      // Exibindo - P1
+        console.log('Olá mundo!')
+    </script>
+
+</body>
+</html>
