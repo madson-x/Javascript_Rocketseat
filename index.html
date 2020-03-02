@@ -6,64 +6,24 @@
     <title>Curso Javascript</title>
 </head>
 <body>
-    
-    
-    
-    
-    
-    
     <script>
 
-        //Javascript P4 - Condicionais 
-
-        function retornaSexo(sexo){
-
-            if (sexo === "M") {
-
-                return "Masculino";
-                
-            } else if (sexo === "F") {
-                
-                return "Feminino";
-            } else {
-                return "Indefinido";
-            }            
-        }
-
-        var rSexo1 = retornaSexo("M");
-        var rSexo2 = retornaSexo("F");
-        var rSexo3 = retornaSexo("k");
-
-        function retornaSexo(sexo){
-
-        if (sexo === "M") {
-
-            return "Masculino";
-    
-        } else if (sexo === "F") {
-    
-            return "Feminino";
-        } else {
-            return "Indefinido";
-        }
-    }
-
-
-
-        var fResultado = soma(1920,1080);
-
-
-
-        //Javascript P3 - Funções 
-
-        function soma(numero1, numero2){
-            var fResultado = numero1 + numero2
-            return fResultado;
-        }
-
-        var fResultado = soma(1920,1080);
-
-
+        //Javascript P1 - Variaveis e dados
+        var nome = 'Madson';
+        var idade = 31;
+        var peso = 98.4;
+        var humano = true;
+        
+        var alunos = ['Madson','Robson','Puc']
+        
+        var aluno = {
+            nome:'Carlos',
+            idade: 35,
+            peso: 80.5,
+            sexo: 'M',
+            humano: true
+        };
+        
         //Javascript P2 - Operações matemáticas
 
         var x = 10;
@@ -76,24 +36,158 @@
         var resultado4 = 5 % 3;
         var resultado5 = m + 3;
         m +=10;
+        
+        
+        //Javascript P3 - Funções 
+                
+        function soma(numero1, numero2){
+            var fResultado = numero1 + numero2
+            return fResultado;
+        }
 
+        var fResultado = soma(1920,1080);
         
 
-        //Javascript P1 - Variaveis e dados
-        var nome = 'Madson';
-        var idade = 31;
-        var peso = 98.4;
-        var humano = true;
+        //Javascript P4 - Condicionais 
 
-        var alunos = ['Madson','Robson','Puc']
+        function retornaSexo(sexo) {
+
+            if (sexo === "M") {
+
+                return "Masculino_if";
+
+            } else if (sexo === "F") {
+
+                return "Feminino_if";
+            } else {
+                return "Indefinido_if";
+            }
+        }
+
+        var rSexo1 = retornaSexo("M");
+        var rSexo2 = retornaSexo("F");
+        var rSexo3 = retornaSexo("k");
+
+        function SWretornaSexo(sexo) {
+            switch (sexo) {
+                case 'M':
+                    return "Masculino_SW";
+                case 'F':
+                    return "Feminino_SW";
+                default:
+                    return "Indefinido_SW"
+            }
+        }
+
+        var swsexo1 = SWretornaSexo("M");
+        var swsexo2 = SWretornaSexo("F");
+        var swsexo3 = SWretornaSexo("K");
+
+        var fResultado = soma(1920, 1080);
         
-        var aluno = {
-            nome:'Carlos',
+
+        //Javascript P5 - Operadores Lógicos
+        
+        var Gerente = {
+            nome: 'Carlos',
             idade: 35,
             peso: 80.5,
+            sexo: 'M',
             humano: true
         };
+        
+        //Operador AND
+        function operadores_AND(pessoa){
+            
+            if( pessoa.sexo === "M" && pessoa.idade >= 30){
+            return "OK";
+            } else {
+                return "Indefinido!";
+            }   
+        }
+        //Operador OR
+        function operadores_OR(pessoa) {
+            
+            if (pessoa.sexo === "M" || pessoa.idade > 20) {
+                return "OK";
+            } else {
+                return "Indefinido!";
+            }
+        }
+        //Operador NOT
+        function operadores_NOT(pessoa) {
+            
+            if (pessoa.sexo !== "M") {
+                return "OK";
+            } else {
+                return "Indefinido!";
+            }
+        }
+        
+        var ressultadoOperadores0 = Gerente.sexo === "M";
+        
+        var ressultadoOperadores1 = operadores_AND(Gerente);
+        var ressultadoOperadores2= operadores_OR(Gerente);
+        var ressultadoOperadores3= operadores_NOT(Gerente);
+        
+        
+        //Javascript P6 - Condição ternária
+        
+        var Funcionario = {
+            nome: 'Roberto',
+            idade: 40,
+            peso: 76.5,
+            sexo: 'M',
+            humano: true
+        };
+        
+        var resultado_OT = (Funcionario.peso >= 70) ? "Apto" : "Inapto"
 
+        
+        //Javascript P7 - Estrutura de repetição
+        
+        var colaborador = {
+            nome: "Madson",
+            idade: "31"
+        }
+
+        var j = 5;        
+        
+        //FOR - Usar quando o ponto de parada é conhecido.
+        for (var i = 95; i <=100; i++){
+            colaborador.idade--;
+        }
+        
+        //WHILE - Usar quando não é possivel determinar o ponto de parada.
+        while(j < 0){
+            j--;
+        }
+
+                        
+        //Javascript P8 - Intervalo e timeout
+            
+        function exibeAlgo(){
+            console.log("P8 - Intervalo executando a cada 10s.")
+        }
+        
+        function exibeAlgo1() {
+            console.log("P8 - Timeout executado em 5s.")
+        }
+            
+        setInterval(exibeAlgo,10000);
+        setTimeout(exibeAlgo1, 5000);
+        
+        
+        console.log(colaborador.idade); // Exibindo - P7
+        console.log(j); // Exibindo - P7
+        console.log(resultado_OT); // Exibindo - P6
+        console.log(ressultadoOperadores0); // Exibindo - P5
+        console.log(ressultadoOperadores1); // Exibindo - P5
+        console.log(ressultadoOperadores2); // Exibindo - P5
+        console.log(ressultadoOperadores3); // Exibindo - P5
+        console.log(swsexo1); // Exibindo - P4
+        console.log(swsexo2); // Exibindo - P4
+        console.log(swsexo3); // Exibindo - P4
         console.log(rSexo1); // Exibindo - P4
         console.log(rSexo2); // Exibindo - P4
         console.log(rSexo3); // Exibindo - P4
@@ -107,6 +201,109 @@
         console.log(alunos[0]);  // Exibindo - P1
         console.log(aluno);      // Exibindo - P1
         console.log('Olá mundo!')
+
+
+        //DESAFIO Módulo 1
+
+        //Exercício 1
+
+        var endereco = {
+            rua: "Rua dos pinheiros",
+            numero: 1293,
+            bairro: "Centro",
+            cidade: "São Paulo",
+            uf: "SP"
+        };
+        console.log("Exe_1")
+        console.log("O usuário mora em " + endereco.cidade + " / " + endereco.uf + ", no bairro " + endereco.bairro + ", na rua " + endereco.rua + " com o nº " + endereco.numero + ".")
+
+        //Exercício 2
+
+        function pares(x, y) {
+            for (x; x <= y; x++) {
+                console.log("Exe_2")
+                console.log(x);
+                x++;
+            }
+        }
+
+        pares(0, 11);
+
+
+        //Exercício 3
+
+        function temHabilidade(skills) {
+            var resultado_Exe3 = skills.indexOf("Javascript") ? true : false;
+            if (resultado_Exe3) {
+
+                console.log("Exe_3")
+                console.log("Resultado True!")
+            }
+            else {
+                console.log("Exe_3")
+                console.log("Resultado False!")
+            }
+        }
+
+        var skills = ["Javascript", "ReactJS", "React Native"];
+        temHabilidade(skills); // true ou false
+
+
+        //Exercíco 4
+
+        function experiencia(anos) {
+            switch (anos) {
+                case 0: return "Iniciante";
+                case 1: return "Iniciante";
+                case 2: return "Intermediário";
+                case 3: return "Intermediário";
+                case 4: return "Avançado";
+                case 5: return "Avançado";
+                case 6: return "Avançado";
+                case 7: return "Avançado";
+                case 8: return "Jedi Master";
+            }
+        }
+        var anosEstudo = 7;
+
+        var Exe_4 = experiencia(anosEstudo);
+
+        console.log("Exe_4")
+        console.log(Exe_4);
+        // De 0-1 ano: Iniciante
+        // De 1-3 anos: Intermediário
+        // De 3-6 anos: Avançado
+        // De 7 acima: Jedi Master
+
+
+        //Exercício 5
+
+        var usuarios = [
+            {
+                nome: "Diego",
+                habilidades: ["Javascript", "ReactJS", "Redux"]
+            },
+            {
+                nome: "Gabriel",
+                habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+            }
+        ];
+
+        var habilidades0;
+        var habilidades1;
+
+
+        for (const value of usuarios) {
+
+            habilidades0 = usuarios[0].habilidades.join();
+            habilidades1 = usuarios[1].habilidades.join();
+        }
+
+        console.log("Exe_5")
+        console.log("O " + usuarios[0].nome + " possui as habilidades: " + habilidades0 + ".");
+        console.log("O " + usuarios[1].nome + " possui as habilidades: " + habilidades1 + ".");
+
+
     </script>
 
 </body>
